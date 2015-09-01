@@ -1,0 +1,8 @@
+== README
+
+Twilio base comes with a basic setup for tracking incoming and outgoing text messages from twilio.
+
+Twilio base is comes with gems
+
+It aslo comes with clockwork gem
+<tt>rake doc:app</tt>.

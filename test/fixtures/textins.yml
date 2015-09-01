@@ -1,0 +1,39 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  toCountry: MyString
+  toState: MyString
+  SmsMessageSid: MyString
+  numMedia: MyString
+  toCity: MyString
+  fromZip: MyString
+  smsSid: MyString
+  fromState: MyString
+  smsStatus: MyString
+  fromCity: MyString
+  body: MyText
+  fromCountry: MyString
+  to: MyString
+  toZip: MyString
+  messageSid: MyString
+  from: MyString
+  apiVersion: MyString
+
+two:
+  toCountry: MyString
+  toState: MyString
+  SmsMessageSid: MyString
+  numMedia: MyString
+  toCity: MyString
+  fromZip: MyString
+  smsSid: MyString
+  fromState: MyString
+  smsStatus: MyString
+  fromCity: MyString
+  body: MyText
+  fromCountry: MyString
+  to: MyString
+  toZip: MyString
+  messageSid: MyString
+  from: MyString
+  apiVersion: MyString
