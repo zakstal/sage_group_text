@@ -4,6 +4,7 @@ class TwilioSend
 
 	#TODO: make number and body into hash with keys as :numer, :body
 	def self.send_text(to_number, body)
+		p "in send_text"
 		self.new(to_number, body)
 	end
 
@@ -17,6 +18,7 @@ class TwilioSend
 	end
 
 	def initialize(to_number, body)
+		p "in twilio initialize"
 		@body = body
 		@to_number = to_number
 		@client = new_twilio_client
