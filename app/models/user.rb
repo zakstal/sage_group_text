@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 		found_group = self.find_group( group )
 
 		found_group.users.map do |user|
+			p "user phone #{user.phone}, self phone: #{self.phone}"
 			if user.phone != self.phone
 				user
 			end

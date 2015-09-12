@@ -14,7 +14,7 @@ class Match
 
 		groups.each do |group|
 			if @org_message =~ /^#{group.downcase}/
-				@users = @user.other_group_members( group )
+				@users = @user.other_group_members( group.downcase )
 				self.get_message( group )
 			end
 		end

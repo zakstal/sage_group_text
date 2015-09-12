@@ -1,6 +1,6 @@
 class TwilioSend
 
-	MY_NUMBER = '+16362246812'
+	MY_NUMBER = '+6502097477'
 
 	#TODO: make number and body into hash with keys as :numer, :body
 	def self.send_text(to_number, body)
