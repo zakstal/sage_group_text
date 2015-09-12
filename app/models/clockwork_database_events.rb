@@ -7,8 +7,4 @@ class ClockworkDatabaseEvents < ActiveRecord::Base
   def frequency
     frequency_quantity.send(frequency_period.name.pluralize)
   end
-
-  def send_income_request
-  	SudoRouter.new({body: '60', user: self.user})
-  end
 end

@@ -3,9 +3,17 @@ class TwilioController < ApplicationController
   def inbound_text
     p "I have made it into the controller"
     pars = Hash[inbound_text_params.map { |k,v| [k.underscore, v]}]
-    user = User.find_by_phone(pars["from"])
+    
+    TextIn.create!( pars )
 
-    TextIn.create!(pars)
+    user = User.find_by_phone( pars["from"] )
+    message = pars["body"]
+    match = Match.new( message, user )
+    
+    TwilioSend.send_group_text(match.users, match.message)
+
+
+
 	  render json: pars
   end
 

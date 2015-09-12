@@ -7,6 +7,12 @@ class TwilioSend
 		self.new(to_number, body)
 	end
 
+	def self.send_group_text(to_num_arr, body)
+		to_num_arr.each do |num|
+			self.send_text(num, body)
+		end
+	end
+
 	def initialize(to_number, body)
 		@body = body
 		@to_number = to_number
