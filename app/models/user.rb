@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
 
 	def find_group( group )
 		p "groups: #{self.groups}"
-		p "group users: #{self.groups.users}"
+		p "group users: #{self.groups[0].users}"
 		self.groups.find do |g|
 			g.name === group
 		end
