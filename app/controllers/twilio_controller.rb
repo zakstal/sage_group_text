@@ -3,7 +3,7 @@ class TwilioController < ApplicationController
   def inbound_text
     p "I have made it into the controller"
     pars = Hash[inbound_text_params.map { |k,v| [k.underscore, v]}]
-    
+    p pars
     TextIn.create!( pars )
 
     user = User.find_by_phone( pars["from"] )
