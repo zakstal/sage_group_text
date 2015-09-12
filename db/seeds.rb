@@ -12,8 +12,8 @@ end
 ClockworkDatabaseEvents.create!(frequency_quantity: 1, frequency_period_id: 2, user_id: 1)
 
 
-User.create!(name: "zak", phone: "2068532262", email: "zakstal@gmail.com")
-User.create!(name: "KC", phone: "5108593783", email: "jacquelinesoderstrom@gmail.com")
+User.create!(name: "zak", phone: "12068532262", email: "zakstal@gmail.com")
+User.create!(name: "KC", phone: "15108593783", email: "jacquelinesoderstrom@gmail.com")
 
 Group.create!(name: "sage", message: "sage?")
 

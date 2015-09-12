@@ -20,7 +20,6 @@ class TwilioController < ApplicationController
 
     p "users:"
     p match
-    p match.message
 
 	  render json: pars
   end

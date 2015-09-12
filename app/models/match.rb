@@ -13,7 +13,7 @@ class Match
 		groups = Group.all.pluck(:name)
 
 		groups.each do |group|
-			if @org_message =~ /^#{group}/
+			if @org_message =~ /^#{group.downcase}/
 				@users = @user.other_group_members( group )
 				self.get_message( group )
 			end
