@@ -8,6 +8,8 @@ class TwilioController < ApplicationController
 
     user = User.find_by_phone( pars["from"] )
     message = pars["body"]
+    p "user #{user}"
+    p "message #{message}"
 
     if user
       #TODO: sanitize data coming in
@@ -17,7 +19,7 @@ class TwilioController < ApplicationController
 
 
     p "users:"
-    p match.users
+    p match
     p match.message
 
 	  render json: pars
