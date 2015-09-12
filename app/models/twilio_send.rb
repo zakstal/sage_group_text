@@ -7,12 +7,12 @@ class TwilioSend
 		self.new(to_number, body)
 	end
 
-	def self.send_group_text(to_num_arr, body)
-		to_num_arr.each do |num|
+	def self.send_group_text(user_arr, body)
+		user_arr.each do |user|
 			p "send group text"
-			p num
+			p "user phone: #{user.phone}"
 			p body
-			self.send_text(num, body)
+			self.send_text(user.phone, body)
 		end
 	end
 
@@ -28,6 +28,7 @@ class TwilioSend
 	end
 
 	def send_message
+		p "in send_message in twilio_send model"
 		@client.sms.messages.create from: MY_NUMBER, to: @to_number, body: @body
 	end
 
