@@ -8,7 +8,7 @@ class TwilioController < ApplicationController
 
     user = User.find_by_phone( pars["from"] )
     message = pars["body"]
-    p Users.all
+    p User.all
     p "this is the user #{user}"
     p "message #{message}"
 
