@@ -8,11 +8,12 @@ class TwilioController < ApplicationController
 
     user = User.find_by_phone( pars["from"] )
     message = pars["body"]
-    match = Match.new( message, user )
-    
-    TwilioSend.send_group_text(match.users, match.message)
 
-
+    if user
+      #TODO: sanitize data coming in
+      match = Match.new( message, user )
+      TwilioSend.send_group_text(match.users, match.message)
+    end
 
 	  render json: pars
   end
