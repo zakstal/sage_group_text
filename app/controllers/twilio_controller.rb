@@ -15,6 +15,11 @@ class TwilioController < ApplicationController
       TwilioSend.send_group_text(match.users, match.message)
     end
 
+
+    p "users:"
+    p match.users
+    p match.message
+
 	  render json: pars
   end
 

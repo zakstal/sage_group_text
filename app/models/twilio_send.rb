@@ -9,6 +9,9 @@ class TwilioSend
 
 	def self.send_group_text(to_num_arr, body)
 		to_num_arr.each do |num|
+			p "send group text"
+			p num
+			p body
 			self.send_text(num, body)
 		end
 	end
