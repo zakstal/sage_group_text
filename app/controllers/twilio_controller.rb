@@ -6,7 +6,7 @@ class TwilioController < ApplicationController
     p pars
     TextIn.create!( pars )
 
-    user = User.find_by_phone( pars["from"] )
+    user = User.find_by_phone( pars["from"].gsub("+", "") )
     message = pars["body"]
     p User.all
     p "this is the user #{user}"
