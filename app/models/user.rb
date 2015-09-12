@@ -6,18 +6,13 @@ class User < ActiveRecord::Base
 	def other_group_members( group )
 		found_group = self.find_group( group )
 
-		found_group.users.map do |user|
-			p "user phone #{user.phone}, self phone: #{self.phone}"
-			p "user name #{user.name}"
-			if user.phone != self.phone
-				user
-			end
+		found_group.users.select do |user|
+			user.phone != self.phone
 		end
 	end
 
 	def find_group( group )
 		p "groups: #{self.groups}"
-		p "group users: #{self.groups[0].users} update me"
 		self.groups.find do |g|
 			g.name === group
 		end
